@@ -79,6 +79,8 @@ section h2 {
     text-align: center;
     border: 1px solid #ddd;
     padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
     border-radius: 5px;
     background-color: #fff;
     width: calc(33.33% - 20px); /* Three members per row */
