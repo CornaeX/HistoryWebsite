@@ -5,15 +5,18 @@ body {
     line-height: 1.8;
     background-color: #f9f9f9;
 }
+
 header {
     background-color: #800000;
     color: white;
     padding: 20px;
     text-align: center;
 }
+
 header h1 {
     margin: 0;
 }
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -22,18 +25,22 @@ nav ul {
     background-color: #a52a2a;
     margin: 0;
 }
+
 nav ul li {
     margin: 0 15px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
 }
+
 .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
 section {
     margin-bottom: 30px;
     background-color: #fff;
@@ -41,26 +48,33 @@ section {
     padding: 15px;
     border-radius: 5px;
 }
+
 section h2 {
     color: #800000;
 }
+
 .images {
     display: flex;
     gap: 10px;
     margin-bottom: 15px;
+    flex-wrap: wrap; /* Ensure images wrap on smaller screens */
+    justify-content: center;
 }
+
 .images img {
-    /* max-width: 100%; */
-    width: auto;
-    height: 200px; /* Maintains aspect ratio */
+    width: 100%;
+    height: auto;
+    max-width: 45%; /* Adjust image size to fit the screen */
     border-radius: 5px;
 }
+
 .members {
     display: flex;
     gap: 20px;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .member {
     text-align: center;
     border: 1px solid #ddd;
@@ -70,6 +84,7 @@ section h2 {
     width: calc(33.33% - 20px); /* Three members per row */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .member img {
     width: 100%;
     max-width: 150px;
@@ -77,18 +92,22 @@ section h2 {
     border-radius: 50%;
     margin-bottom: 10px;
 }
+
 .member h3 {
     color: #800000;
     font-size: 18px;
     margin: 5px 0;
 }
+
 .member p {
     color: #555;
     font-size: 14px;
 }
+
 ul li {
     margin-bottom: 10px;
 }
+
 footer {
     background-color: #800000;
     color: white;
@@ -96,11 +115,60 @@ footer {
     padding: 10px 0;
     margin-top: 20px;
 }
+
 footer a {
     color: #fff;
     text-decoration: underline;
 }
+
 footer a:hover {
     text-decoration: none;
     color: #ffcc00;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    /* Adjust member layout for smaller screens */
+    .members {
+        justify-content: center;
+    }
+
+    .member {
+        width: 100%; /* Stack members on top of each other */
+        margin-bottom: 20px;
+    }
+
+    .images img {
+        max-width: 100%; /* Ensure images fit in mobile view */
+    }
+
+    header h1 {
+        font-size: 24px; /* Adjust header size for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add some space between menu items */
+    }
+
+    .container {
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px; /* Further reduce header size for very small screens */
+    }
+
+    .member h3 {
+        font-size: 16px; /* Reduce font size for member names */
+    }
+
+    .images img {
+        max-width: 100%; /* Ensure images are responsive */
+    }
 }
